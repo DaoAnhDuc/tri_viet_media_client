@@ -767,6 +767,7 @@ strong {
   border-radius: var(--border-radius-medium);
   position: relative;
   overflow: hidden;
+  border: 1px solid #e1b686;
 }
 
 .reviews-block .border-top {

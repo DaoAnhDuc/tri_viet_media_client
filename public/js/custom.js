@@ -1,32 +1,24 @@
 (function ($) {
-  "use strict";
+  'use strict';
 
   // NAVBAR
-  $(".navbar-collapse a").on("click", function () {
-    $(".navbar-collapse").collapse("hide");
+  $('.navbar-collapse a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
   });
-
-  $(function () {
+  window.autoRunSlidesVegas = (slides) => {
+    console.log(slides);
     $('.hero-slides').vegas({
-      slides: [
-        { src: './public/images/DSC_7608.JPG' },
-        {
-          src: './public/images/DSC_7615.JPG',
-        },
-        {
-          src: './public/images/DSC_7622.JPG',
-        },
-      ],
+      slides,
       timer: false,
       animation: 'kenburns',
     });
-  });
+  };
 
   // CUSTOM LINK
-  $(".smoothscroll").click(function () {
-    var el = $(this).attr("href");
+  $('.smoothscroll').click(function () {
+    var el = $(this).attr('href');
     var elWrapped = $(el);
-    var header_height = $(".navbar").height() + 60;
+    var header_height = $('.navbar').height() + 60;
 
     scrollToDiv(elWrapped, header_height);
     return false;
@@ -36,11 +28,11 @@
       var offsetTop = offset.top;
       var totalScroll = offsetTop - navheight;
 
-      $("body,html").animate(
+      $('body,html').animate(
         {
           scrollTop: totalScroll,
         },
-        300
+        300,
       );
     }
   });

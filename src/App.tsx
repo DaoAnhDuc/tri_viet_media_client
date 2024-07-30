@@ -25,6 +25,11 @@ const { defaultAlgorithm, darkAlgorithm } = theme;
 
 const { useToken } = theme;
 
+declare global {
+  interface Window {
+    autoRunSlidesVegas: Function;
+  }
+}
 const App = () => {
   const { token } = useToken();
 
@@ -37,7 +42,6 @@ const App = () => {
     dispatch(setLanguge(i18n.resolvedLanguage));
   }, []);
 
-  console.log(token);
   return (
     <ConfigProvider
       theme={{
