@@ -21,13 +21,13 @@ const CEO = ({}: Props) => {
           modules={[Navigation]}
           spaceBetween={50}
           slidesPerView={1}
-          navigation
+          navigation={true}
           pagination={{ clickable: true }}
           onSwiper={(swiper: any) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
         >
           {[1, 2, 3, 4, 5].map((i) => (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <div className="row align-items-center">
                 <div className="col-lg-5 col-12">
                   <div className="ratio ratio-1x1">

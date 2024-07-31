@@ -6,3 +6,21 @@
     }
   }
 }
+#about-page .user-item {
+  overflow: hidden;
+}
+#about-page .user-item .image-user {
+  transition: transform 0.5s ease;
+}
+#about-page .user-item:hover .image-user {
+  transform: scale(1.1);
+}
+
+#about-page .user-item .description {
+  transition: transform 1s ease;
+}
+
+
+#about-page .user-item:hover .description {
+  opacity: 1 !important;
+}

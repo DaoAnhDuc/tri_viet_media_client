@@ -53,7 +53,7 @@ const KhachHang = ({}: Props) => {
             onSlideChange={() => console.log('slide change')}
           >
             {logoUrls.map((i) => (
-              <SwiperSlide>
+              <SwiperSlide key={i}>
                 <img
                   src={i}
                   alt=""

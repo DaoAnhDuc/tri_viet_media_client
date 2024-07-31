@@ -1,4 +1,5 @@
 import {} from 'react';
+import { Link } from 'react-router-dom';
 
 type Props = {};
 
@@ -10,22 +11,22 @@ const DichVu = ({}: Props) => {
     >
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+          <div className="col-lg-12 col-12 mt-2 text-center pb-lg-2">
             {/* <em class="text-white">Creative Baristas</em> */}
             <div
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                padding: '0 20px',
+                padding: '0 0px',
               }}
             >
               <h2 className="text-white">Dịch vụ</h2>
-              <a
-                href="about.html"
+              <Link
+                to={'/dich-vu'}
                 className="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4"
               >
                 Xem thêm
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 col-12 mb-4">

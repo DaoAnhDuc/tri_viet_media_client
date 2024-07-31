@@ -25,11 +25,6 @@ const { defaultAlgorithm, darkAlgorithm } = theme;
 
 const { useToken } = theme;
 
-declare global {
-  interface Window {
-    autoRunSlidesVegas: Function;
-  }
-}
 const App = () => {
   const { token } = useToken();
 

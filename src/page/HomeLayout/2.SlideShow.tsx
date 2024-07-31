@@ -31,7 +31,7 @@ const SlideShow = ({}: Props) => {
       modules={[Navigation, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
-      navigation
+      navigation={true}
       loop={true}
       autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
       pagination={{ clickable: true }}
@@ -39,7 +39,7 @@ const SlideShow = ({}: Props) => {
       onSlideChange={() => console.log('slide change')}
     >
       {data.map((i) => (
-        <SwiperSlide>
+        <SwiperSlide key={i.src}>
           <section
             className="hero-section d-flex justify-content-center align-items-center"
             id="section_1"

@@ -36,7 +36,7 @@ const VeChungToi = ({}: Props) => {
           </div>
           <div className="col-lg-6 col-12">
             <div className="ratio ratio-1x1">
-              <video className="custom-video" autoPlay loop muted>
+              <video className="custom-video" autoPlay={true} loop={true} muted={true}>
                 <source src="./videos/v1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>

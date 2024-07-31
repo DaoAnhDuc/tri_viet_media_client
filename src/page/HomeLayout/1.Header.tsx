@@ -1,8 +1,13 @@
 import {} from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 type Props = {};
 
 const Header = ({}: Props) => {
+  const location = useLocation();
+  const pathname = location.pathname;
+  console.log(pathname);
+
   return (
     <div
       style={{
@@ -40,55 +45,96 @@ const Header = ({}: Props) => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-lg-auto">
               <li className="nav-item">
-                <a className="nav-link click-scroll" href="#section_1">
+                <Link
+                  to={'/'}
+                  className={`nav-link click-scroll ${
+                    pathname === '/' ? 'active' : ''
+                  }`}
+                >
                   Trang chủ
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link click-scroll" href="#section_2">
+                <Link
+                  to={'/ve-chung-toi'}
+                  className={`nav-link click-scroll ${
+                    pathname === '/ve-chung-toi' ? 'active' : ''
+                  }`}
+                >
                   Về chúng tôi
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link click-scroll" href="#section_4">
+                <Link
+                  to={'/dich-vu'}
+                  className={`nav-link click-scroll ${
+                    pathname === '/dich-vu' ? 'active' : ''
+                  }`}
+                >
                   Dịch vụ
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link click-scroll" href="#section_7">
+                <Link
+                  to={'/du-an'}
+                  className={`nav-link click-scroll ${
+                    pathname === '/du-an' ? 'active' : ''
+                  }`}
+                >
                   Dự án
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link click-scroll" href="#section_9">
+                <Link
+                  to={'/tin-tuc'}
+                  className={`nav-link click-scroll ${
+                    pathname === '/tin-tuc' ? 'active' : ''
+                  }`}
+                >
                   Tin tức
-                </a>
+                </Link>
               </li>
-              <li className="nav-item">
-                <a className="nav-link click-scroll" href="#section_10">
+              {/* <li className="nav-item">
+                <Link
+                  to={'/lien-he'}
+                  className={`nav-link click-scroll ${
+                    pathname === '/lien-he' ? 'active' : ''
+                  }`}
+                >
                   Liên hệ
-                </a>
-              </li>
+                </Link>
+              </li> */}
             </ul>
             <div style={{ display: 'flex', gap: 6 }}>
               <div className="ml-2">
-                <a className="nav-link click-scroll" href="#section_10">
+                <a
+                  className={`nav-link click-scroll ${
+                    pathname === '/' ? 'active' : ''
+                  }`}
+                  href="#section_10"
+                >
                   <div style={{ padding: 2, borderRadius: 2 }}>
                     <img
-                      src="./images/lg-zalo.png"
+                      src="./images/zalo.jpg"
                       alt=""
                       style={{
                         width: 32,
                         height: 32,
                         objectFit: 'contain',
                         backgroundColor: '#ffffff',
+                        borderRadius: 4,
                       }}
                     />
                   </div>
                 </a>
               </div>
               <div className="ml-2">
-                <a className="nav-link click-scroll" href="#section_10">
+                <a
+                  className={`nav-link click-scroll ${
+                    pathname === '/' ? 'active' : ''
+                  }`}
+                  href="#section_10"
+                >
                   <div style={{ padding: 2, borderRadius: 2 }}>
                     <img
                       src="./images/lg-facebook.png"
@@ -96,7 +142,6 @@ const Header = ({}: Props) => {
                       style={{
                         width: 32,
                         height: 32,
-
                         objectFit: 'contain',
                       }}
                     />
@@ -104,7 +149,12 @@ const Header = ({}: Props) => {
                 </a>
               </div>
               <div className="ml-2">
-                <a className="nav-link click-scroll" href="#section_10">
+                <a
+                  className={`nav-link click-scroll ${
+                    pathname === '/' ? 'active' : ''
+                  }`}
+                  href="#section_10"
+                >
                   <div style={{ padding: 2, borderRadius: 2 }}>
                     <img
                       src="./images/lg-youtube.png"
@@ -112,7 +162,6 @@ const Header = ({}: Props) => {
                       style={{
                         width: 32,
                         height: 32,
-
                         objectFit: 'contain',
                       }}
                     />
