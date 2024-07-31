@@ -20,7 +20,7 @@ import {
 } from './redux/store';
 import { serviceConfig } from './services/serviceManager';
 import styleModule from './style.module.scss';
-
+import { useLocation } from 'react-router-dom';
 const { defaultAlgorithm, darkAlgorithm } = theme;
 
 const { useToken } = theme;
@@ -32,6 +32,11 @@ const App = () => {
     (state: RootState) => state.themeLanguage.theme,
   );
   const dispatch = useAppDispatch();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   useEffect(() => {
     serviceConfig(getStore());
     dispatch(setLanguge(i18n.resolvedLanguage));

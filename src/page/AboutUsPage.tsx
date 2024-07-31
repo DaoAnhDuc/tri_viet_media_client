@@ -3,6 +3,7 @@ import Header from './HomeLayout/1.Header';
 
 import Footer from './HomeLayout/11.Footer';
 import LienHe from './HomeLayout/10.LienHe';
+import { Link } from 'react-router-dom';
 type Props = {};
 
 const AboutUsPage = ({}: Props) => {
@@ -82,49 +83,52 @@ const AboutUsPage = ({}: Props) => {
           <div className="row align-items-center mt-6">
             {Array.from(Array(6).keys()).map((i) => (
               <div className="col-lg-4 col-6 mt-lg-0 mb-4 " key={i}>
-                <div className="user-item" style={{ position: 'relative' }}>
-                  <img
-                    className="image-user"
-                    style={{ width: '100%', height: 500, objectFit: 'cover' }}
-                    src="https://cdn.pixabay.com/photo/2024/06/24/04/05/woman-8849047_1280.jpg"
-                    alt=""
-                  />
-                  <div
-                    className="description"
-                    style={{
-                      fontSize: 16,
-                      position: 'absolute',
-                      inset: 0,
-                      zIndex: 1,
-                      padding: 20,
-                      color: '#fff',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'flex-end',
-                      opacity: 0,
-                      background: '#4d382170',
-                    }}
-                  >
-                    <div style={{ fontWeight: 'bold', fontSize: 20 }}>
-                      Tên của giám đốc
-                    </div>
-                    <div style={{ fontSize: 20, marginBottom: 10 }}>
-                      <i>Chức vụ</i>
-                    </div>
-                    <div>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Quidem aut ea consequuntur laboriosam adipisci temporibus
-                      ut cum, nulla accusamus corporis perspiciatis obcaecati
-                      dicta quos, unde animi numquam molestiae autem odio.
+                <Link to={'/chi-tiet'}>
+                  <div className="user-item" style={{ position: 'relative' }}>
+                    <img
+                      className="image-user"
+                      style={{ width: '100%', height: 500, objectFit: 'cover' }}
+                      src="https://cdn.pixabay.com/photo/2024/06/24/04/05/woman-8849047_1280.jpg"
+                      alt=""
+                    />
+                    <div
+                      className="description"
+                      style={{
+                        fontSize: 16,
+                        position: 'absolute',
+                        inset: 0,
+                        zIndex: 1,
+                        padding: 20,
+                        color: '#fff',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'flex-end',
+                        opacity: 0,
+                        background: '#4d382170',
+                      }}
+                    >
+                      <div style={{ fontWeight: 'bold', fontSize: 20 }}>
+                        Tên của giám đốc
+                      </div>
+                      <div style={{ fontSize: 20, marginBottom: 10 }}>
+                        <i>Chức vụ</i>
+                      </div>
+                      <div>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Quidem aut ea consequuntur laboriosam adipisci
+                        temporibus ut cum, nulla accusamus corporis perspiciatis
+                        obcaecati dicta quos, unde animi numquam molestiae autem
+                        odio.
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <LienHe/>
+      <LienHe />
       <Footer />
     </main>
   );

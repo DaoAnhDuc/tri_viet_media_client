@@ -6,6 +6,8 @@ import ServicePage from '../page/ServicePage';
 import ProjectPage from '../page/ProjectPage';
 import AboutUsPage from '../page/AboutUsPage';
 import NewsPage from '../page/NewsPage';
+import AboutUsDetailPage from '../page/AboutUsDetailPage';
+import NewDetailPage from '../page/NewDetailPage';
 const Router = () => {
   return (
     <ErrorBoundaryRoutes>
@@ -13,7 +15,9 @@ const Router = () => {
       <Route path={'/dich-vu'} element={<ServicePage />} />
       <Route path={'/du-an'} element={<ProjectPage />} />
       <Route path={'/ve-chung-toi'} element={<AboutUsPage />} />
+      <Route path={'/chi-tiet'} element={<AboutUsDetailPage />} />
       <Route path={'/tin-tuc'} element={<NewsPage />} />
+      <Route path={'/tin-tuc-chi-tiet'} element={<NewDetailPage />} />
     </ErrorBoundaryRoutes>
   );
 };
