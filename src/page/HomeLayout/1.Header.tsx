@@ -25,7 +25,6 @@ const Header = ({}: Props) => {
               className="navbar-brand-image img-fluid"
               alt="Barista Cafe Template"
             />
-            TriViet.co
           </a>
           <button
             className="navbar-toggler"
@@ -71,6 +70,57 @@ const Header = ({}: Props) => {
                 </a>
               </li>
             </ul>
+            <div style={{ display: 'flex', gap: 6 }}>
+              <div className="ml-2">
+                <a className="nav-link click-scroll" href="#section_10">
+                  <div style={{ padding: 2, borderRadius: 2 }}>
+                    <img
+                      src="./images/lg-zalo.png"
+                      alt=""
+                      style={{
+                        width: 32,
+                        height: 32,
+                        objectFit: 'contain',
+                        backgroundColor: '#ffffff',
+                      }}
+                    />
+                  </div>
+                </a>
+              </div>
+              <div className="ml-2">
+                <a className="nav-link click-scroll" href="#section_10">
+                  <div style={{ padding: 2, borderRadius: 2 }}>
+                    <img
+                      src="./images/lg-facebook.png"
+                      alt=""
+                      style={{
+                        width: 32,
+                        height: 32,
+
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </div>
+                </a>
+              </div>
+              <div className="ml-2">
+                <a className="nav-link click-scroll" href="#section_10">
+                  <div style={{ padding: 2, borderRadius: 2 }}>
+                    <img
+                      src="./images/lg-youtube.png"
+                      alt=""
+                      style={{
+                        width: 32,
+                        height: 32,
+
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+
             {/* <div className="ms-lg-3">
               <a
                 className="btn custom-btn custom-border-btn"

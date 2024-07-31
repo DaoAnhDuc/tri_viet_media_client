@@ -32,7 +32,7 @@ https://www.tooplate.com/view/2137-barista-cafe
   --border-color: #7fffd4;
   --link-hover-color: #e76f51;
 
-  --body-font-family: "Plus Jakarta Sans", sans-serif;
+  --body-font-family: 'Plus Jakarta Sans', sans-serif;
 
   --h1-font-size: 68px;
   --h2-font-size: 46px;
@@ -181,7 +181,7 @@ strong {
 }
 
 .timeline::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 5px;
   background-color: var(--white-color);
@@ -200,7 +200,7 @@ strong {
 }
 
 .timeline-container::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 25px;
   height: 25px;
@@ -221,7 +221,7 @@ strong {
 }
 
 .timeline-container-left::before {
-  content: " ";
+  content: ' ';
   height: 0;
   position: absolute;
   top: 9px;
@@ -234,7 +234,7 @@ strong {
 }
 
 .timeline-container-right::before {
-  content: " ";
+  content: ' ';
   height: 0;
   position: absolute;
   top: 9px;
@@ -352,7 +352,7 @@ strong {
 .navbar .container {
   background: rgba(0, 0, 0, 0.35);
   border-radius: var(--border-radius-medium);
-  padding: 15px 30px;
+  padding: 0px 30px;
 }
 
 .navbar-brand,
@@ -368,7 +368,7 @@ strong {
 }
 
 .navbar-brand-image {
-  width: 48px;
+  width: 96px;
   height: auto;
   margin-right: 10px;
 }
@@ -411,7 +411,7 @@ strong {
 }
 
 .navbar .dropdown-menu::before {
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
@@ -439,7 +439,7 @@ strong {
 }
 
 .navbar .dropdown-toggle::after {
-  content: "\f282";
+  content: '\f282';
   display: inline-block;
   font-family: bootstrap-icons !important;
   font-size: var(--menu-font-size);
@@ -479,12 +479,12 @@ strong {
   box-shadow: none;
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   background: transparent;
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:before,
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:after {
   transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease,
@@ -492,11 +492,11 @@ strong {
   top: 0;
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:before {
   transform: rotate(45deg);
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:after {
   transform: rotate(-45deg);
 }
 
@@ -521,7 +521,7 @@ strong {
   background: var(--white-color);
   width: 30px;
   height: 2px;
-  content: "";
+  content: '';
 }
 
 .navbar-toggler .navbar-toggler-icon::before {
@@ -699,7 +699,7 @@ strong {
   OUR MENU              
 -----------------------------------------*/
 .menu-section {
-  background-image: url("../images/a1.jpg");
+  background-image: url('../images/a1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -745,7 +745,7 @@ strong {
 }
 
 .badge::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -775,7 +775,7 @@ strong {
 }
 
 .reviews-block-image-wrap {
-  background-image: url("../images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg");
+  background-image: url('../images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -808,14 +808,14 @@ strong {
   BOOKING SECTION              
 -----------------------------------------*/
 .booking-section {
-  background-image: url("../images/DSC_7622.JPG");
+  background-image: url('../images/DSC_7622.JPG');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
 }
 .section-about {
-  background-image: url("../images/1.1.jpg");
+  background-image: url('../images/1.1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -868,7 +868,7 @@ strong {
       rgba(0, 0, 0, 0.45),
       rgba(188, 108, 37, 1)
     ),
-    url("../images/DSC_7608.JPG");
+    url('../images/DSC_7608.JPG');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -943,7 +943,7 @@ strong {
   margin-bottom: 15px;
 }
 
-.custom-form button[type="submit"] {
+.custom-form button[type='submit'] {
   background: var(--custom-btn-bg-color);
   border: none;
   border-radius: var(--border-radius-large);
@@ -954,8 +954,8 @@ strong {
   margin-bottom: 0;
 }
 
-.custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
+.custom-form button[type='submit']:hover,
+.custom-form button[type='submit']:focus {
   background: var(--white-color);
   border-color: transparent;
   color: var(--primary-color);

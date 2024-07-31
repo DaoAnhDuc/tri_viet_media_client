@@ -13,12 +13,12 @@ type Props = {};
 
 const SlideShow = ({}: Props) => {
   const data = [
-    { src: './images/DSC_7608.JPG' },
+    { src: './images/b1.jpg' },
     {
-      src: './images/DSC_7615.JPG',
+      src: './images/b2.jpg',
     },
     {
-      src: './images/DSC_7622.JPG',
+      src: './images/b3.jpg',
     },
   ];
   useEffect(() => {
@@ -33,7 +33,7 @@ const SlideShow = ({}: Props) => {
       slidesPerView={1}
       navigation
       loop={true}
-      autoplay={{ delay: 3000, pauseOnMouseEnter:true }}
+      autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
       pagination={{ clickable: true }}
       onSwiper={(swiper: any) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
