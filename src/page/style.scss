@@ -20,7 +20,24 @@
   transition: transform 1s ease;
 }
 
-
 #about-page .user-item:hover .description {
   opacity: 1 !important;
+}
+#news-page-section .wrapper-image .image {
+  position: relative;
+  transition: transform 0.5s ease;
+  filter: grayscale(100%);
+}
+#news-page-section .wrapper-image:hover .image {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+@media (max-width: 992px) {
+  #news-page-section .new-item{
+    flex-direction: column !important;
+    .text-content{
+      height: fit-content !important;
+    }
+  }
 }

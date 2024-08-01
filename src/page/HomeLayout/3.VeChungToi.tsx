@@ -1,4 +1,5 @@
 import {} from 'react';
+import { Link } from 'react-router-dom';
 
 type Props = {};
 
@@ -27,12 +28,12 @@ const VeChungToi = ({}: Props) => {
               </a>
               .
             </p>
-            <a
-              href="about.html"
+            <Link
+              to={"/ve-chung-toi"}
               className="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4"
             >
               Xem thêm
-            </a>
+            </Link>
           </div>
           <div className="col-lg-6 col-12">
             <div className="ratio ratio-1x1">

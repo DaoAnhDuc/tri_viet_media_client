@@ -20,7 +20,7 @@ const AboutUsPage = ({}: Props) => {
           minHeight: '50vh',
           maxHeight: '50vh',
         }}
-      ></section>
+      />
       <section className="about-section section-padding " id="section_2">
         <div className="section-overlay" />
         <div className="container">

@@ -1,9 +1,10 @@
-import {} from 'react'
+import {} from 'react';
 import Footer from './HomeLayout/11.Footer';
 import Header from './HomeLayout/1.Header';
 import LienHe from './HomeLayout/10.LienHe';
+import { Link } from 'react-router-dom';
 
-type Props = {}
+type Props = {};
 
 const ProjectPage = ({}: Props) => {
   return (
@@ -31,54 +32,18 @@ const ProjectPage = ({}: Props) => {
             style={{ display: 'flex', flexWrap: 'wrap' }}
             className="card-container"
           >
-            <div className="card">
-              <img src="images/a (1).jpg" alt="Scent marketing" />
-              <h3>Scent marketing - Hương vị ngọt ngào </h3>
-              <p>
-                Các hoạt động marketing có tác động đến các giác quan không còn
-                xa lạ
-              </p>
-            </div>
-            <div className="card">
-              <img src="images/a (2).jpg" alt="Scent marketing" />
-              <h3>Scent marketing - Hương vị ngọt ngào </h3>
-              <p>
-                Các hoạt động marketing có tác động đến các giác quan không còn
-                xa lạ
-              </p>
-            </div>
-            <div className="card">
-              <img src="images/a (3).jpg" alt="Scent marketing" />
-              <h3>Scent marketing - Hương vị ngọt ngào </h3>
-              <p>
-                Các hoạt động marketing có tác động đến các giác quan không còn
-                xa lạ
-              </p>
-            </div>
-            <div className="card">
-              <img src="images/a (1).jpg" alt="Scent marketing" />
-              <h3>Scent marketing - Hương vị ngọt ngào </h3>
-              <p>
-                Các hoạt động marketing có tác động đến các giác quan không còn
-                xa lạ
-              </p>
-            </div>
-            <div className="card">
-              <img src="images/a (2).jpg" alt="Scent marketing" />
-              <h3>Scent marketing - Hương vị ngọt ngào </h3>
-              <p>
-                Các hoạt động marketing có tác động đến các giác quan không còn
-                xa lạ
-              </p>
-            </div>
-            <div className="card">
-              <img src="images/a (3).jpg" alt="Scent marketing" />
-              <h3>Scent marketing - Hương vị ngọt ngào </h3>
-              <p>
-                Các hoạt động marketing có tác động đến các giác quan không còn
-                xa lạ
-              </p>
-            </div>
+            {Array.from(Array(9).keys()).map((_i, index) => (
+              <div className="card" key={index}>
+                <Link to={'/du-an-chi-tiet'}>
+                  <img src="images/a (1).jpg" alt="Scent marketing" />
+                  <h3>Scent marketing - Hương vị ngọt ngào </h3>
+                  <p>
+                    Các hoạt động marketing có tác động đến các giác quan không
+                    còn xa lạ
+                  </p>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>

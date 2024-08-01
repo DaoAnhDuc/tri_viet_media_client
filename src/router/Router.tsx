@@ -8,6 +8,7 @@ import AboutUsPage from '../page/AboutUsPage';
 import NewsPage from '../page/NewsPage';
 import AboutUsDetailPage from '../page/AboutUsDetailPage';
 import NewDetailPage from '../page/NewDetailPage';
+import ProjectDetailPage from '../page/ProjectDetailPage';
 const Router = () => {
   return (
     <ErrorBoundaryRoutes>
@@ -18,6 +19,7 @@ const Router = () => {
       <Route path={'/chi-tiet'} element={<AboutUsDetailPage />} />
       <Route path={'/tin-tuc'} element={<NewsPage />} />
       <Route path={'/tin-tuc-chi-tiet'} element={<NewDetailPage />} />
+      <Route path={'/du-an-chi-tiet'} element={<ProjectDetailPage />} />
     </ErrorBoundaryRoutes>
   );
 };

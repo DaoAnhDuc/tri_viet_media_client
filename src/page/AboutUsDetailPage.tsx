@@ -17,7 +17,7 @@ const AboutUsDetailPage = ({}: Props) => {
           backgroundPosition: 'center',
           filter: 'blur(8px)',
         }}
-      ></section>
+      />
       <div
         style={{ position: 'fixed', inset: 0, paddingTop: 260 }}
         className="container"

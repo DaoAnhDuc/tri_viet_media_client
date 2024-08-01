@@ -1,4 +1,5 @@
 import {} from 'react';
+import { Link } from 'react-router-dom';
 
 type Props = {};
 
@@ -19,16 +20,18 @@ const DuAnCuaChungToi = ({}: Props) => {
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
+                alignItems: 'center',
+                flexWrap: 'wrap',
                 padding: '0 20px',
               }}
             >
               <h2 className="text-white">Dự án của chúng tôi</h2>
-              <a
-                href="about.html"
+              <Link
+                to="/du-an"
                 className="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4"
               >
                 Xem thêm
-              </a>
+              </Link>
             </div>
           </div>
           <div>

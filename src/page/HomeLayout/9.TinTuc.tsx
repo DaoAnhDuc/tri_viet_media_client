@@ -1,4 +1,5 @@
 import {} from 'react';
+import { Link } from 'react-router-dom';
 
 type Props = {};
 
@@ -19,16 +20,17 @@ const TinTuc = ({}: Props) => {
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
+                alignItems: 'center',
                 padding: '0 20px',
               }}
             >
               <h2 className="text-white">Tin tức</h2>
-              <a
-                href="about.html"
+              <Link
+                to="/tin-tuc"
                 className="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4"
               >
                 Xem thêm
-              </a>
+              </Link>
             </div>
           </div>
           <div>

@@ -23,7 +23,7 @@ const NewsPage = ({}: Props) => {
       />
       <section
         className="barista-section section-padding "
-        id="section_4"
+        id="news-page-section"
         style={{ padding: '40px 0' }}
       >
         <div className="container">
@@ -33,66 +33,64 @@ const NewsPage = ({}: Props) => {
           >
             <div style={{ display: 'flex', gap: 40 }}>
               <div style={{ flex: 1 }} className="row justify-content-center">
-                {Array.from(Array(10).keys()).map((i) => (
-                  <Link to={'/tin-tuc-chi-tiet'}>
-                    <div
-                      key={i}
-                      style={{ display: 'flex', gap: 20 }}
-                      className="col-lg-12 col-md-12 col-12 mb-3"
-                    >
-                      <img
-                        style={{ width: 320, height: 180 }}
-                        src="https://photo.znews.vn/w1000/Uploaded/mdf_uswreo/2024_07_31/adam_peatyDa_xac_minh_Theo_doiLuan_Don_1080w_1.jpg"
-                        alt="Scent marketing"
-                      />
-                      <div>
-                        <h5>Scent marketing - Hương vị ngọt ngào </h5>
-                        <p style={{ textAlign: 'justify' }}>
-                          Các hoạt động marketing có tác động đến các giác quan
-                          không còn xa lạ Lorem ipsum dolor sit amet,
-                          consectetur adipisicing elit. Maxime excepturi rerum
-                          impedit eaque cum inventore. Explicabo provident
-                          nostrum sint soluta vel atque deserunt exercitationem
-                          excepturi totam, quaerat cum neque cupiditate.
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-              <div
-                style={{
-                  width: 340,
-                  // background: 'var(--section-bg-color)',
-                  padding: 10,
-                  height: 'fit-content',
-                  border: '1px solid #dfdfdf',
-                }}
-              >
-                <div
-                  style={{
-                    fontWeight: 'bold',
-                    fontSize: 20,
-                    margin: '10px 0',
-                    marginTop: 0,
-                  }}
-                >
-                  Đọc nhiều
-                </div>
-                {Array.from(Array(5).keys()).map((i) => (
+                {Array.from(Array(9).keys()).map((i, index) => (
                   <div
                     key={i}
-                    style={{ display: 'flex', gap: 10 }}
-                    className="col-lg-12 col-md-12 col-12 mb-2"
+                    style={{ display: 'flex', gap: 20 }}
+                    className="col-lg-4 col-md-6 col-12 mb-3"
                   >
-                    <img
-                      style={{ width: 80, height: 80 }}
-                      src="https://photo.znews.vn/w1000/Uploaded/mdf_uswreo/2024_07_31/adam_peatyDa_xac_minh_Theo_doiLuan_Don_1080w_1.jpg"
-                      alt="Scent marketing"
-                    />
-                    <div style={{ fontSize: 16, fontWeight: 'bold' }}>
-                      Scent marketing - Hương vị ngọt ngào
-                    </div>
+                    {' '}
+                    <Link to={'/tin-tuc-chi-tiet'}>
+                      <div
+                        className="new-item"
+                        style={{
+                          display: 'flex',
+                          flexDirection:
+                            index % 3 === 1 ? 'column-reverse' : 'column',
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: '100%',
+                            height: 356,
+                            overflow: 'hidden',
+                            borderRadius: 10,
+                          }}
+                          className="wrapper-image"
+                        >
+                          <div
+                            className="image"
+                            style={{
+                              width: '100%',
+                              height: 356,
+                              backgroundImage: `url('https://mvvsnp.com.vn/wp-content/uploads/2019/01/QG-cover-720x500.jpg')`,
+                              backgroundSize: 'cover',
+                              backgroundPosition: 'center',
+                              borderRadius: 10,
+                            }}
+                          ></div>
+                        </div>
+
+                        <div className='text-content' style={{ padding: '30px', height: 356 }}>
+                          <div
+                            style={{
+                              color: '#edb52a',
+                              fontWeight: 'bold',
+                              fontSize: 14,
+                            }}
+                          >
+                            MAKETING
+                          </div>
+                          <h6 style={{ lineHeight: '32px' }}>
+                            Scent marketing- Hương vị ngọt ngào mang đến sự
+                            thành công cho thương hiệu
+                          </h6>
+                          <p style={{ color: '#ACACAC', fontSize: 14 }}>
+                            02/11/2023
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 ))}
               </div>

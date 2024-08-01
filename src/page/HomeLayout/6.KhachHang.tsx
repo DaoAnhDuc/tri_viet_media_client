@@ -47,7 +47,7 @@ const KhachHang = ({}: Props) => {
             // install Swiper modules
             modules={[Pagination]}
             spaceBetween={50}
-            slidesPerView={5}
+            slidesPerView={window.innerWidth < 600 ? 2 : 4}
             pagination={{ clickable: true }}
             onSwiper={(swiper: any) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}

@@ -18,6 +18,7 @@ const DichVu = ({}: Props) => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 padding: '0 0px',
+                alignItems: 'center'
               }}
             >
               <h2 className="text-white">Dịch vụ</h2>

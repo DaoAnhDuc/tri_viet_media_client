@@ -17,6 +17,7 @@ const Header = ({}: Props) => {
         left: '50%',
         transform: 'translateX(-50%)',
         width: 2067,
+        maxWidth:'100%'
       }}
     >
       <nav className="navbar navbar-expand-lg">
