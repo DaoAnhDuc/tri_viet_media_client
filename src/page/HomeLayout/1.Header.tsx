@@ -17,7 +17,7 @@ const Header = ({}: Props) => {
         left: '50%',
         transform: 'translateX(-50%)',
         width: 2067,
-        maxWidth:'100%'
+        maxWidth: '100%',
       }}
     >
       <nav className="navbar navbar-expand-lg">
@@ -95,25 +95,8 @@ const Header = ({}: Props) => {
                   Tin tức
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link
-                  to={'/lien-he'}
-                  className={`nav-link click-scroll ${
-                    pathname === '/lien-he' ? 'active' : ''
-                  }`}
-                >
-                  Liên hệ
-                </Link>
-              </li> */}
-            </ul>
-            <div style={{ display: 'flex', gap: 6 }}>
-              <div className="ml-2">
-                <a
-                  className={`nav-link click-scroll ${
-                    pathname === '/' ? 'active' : ''
-                  }`}
-                  href="#section_10"
-                >
+              <li className="nav-item" style={{display: 'flex', alignItems: 'center', gap: 6}}>
+                <a>
                   <div style={{ padding: 2, borderRadius: 2 }}>
                     <img
                       src="./images/zalo.jpg"
@@ -128,14 +111,7 @@ const Header = ({}: Props) => {
                     />
                   </div>
                 </a>
-              </div>
-              <div className="ml-2">
-                <a
-                  className={`nav-link click-scroll ${
-                    pathname === '/' ? 'active' : ''
-                  }`}
-                  href="#section_10"
-                >
+                <a>
                   <div style={{ padding: 2, borderRadius: 2 }}>
                     <img
                       src="./images/lg-facebook.png"
@@ -148,14 +124,7 @@ const Header = ({}: Props) => {
                     />
                   </div>
                 </a>
-              </div>
-              <div className="ml-2">
-                <a
-                  className={`nav-link click-scroll ${
-                    pathname === '/' ? 'active' : ''
-                  }`}
-                  href="#section_10"
-                >
+                <a>
                   <div style={{ padding: 2, borderRadius: 2 }}>
                     <img
                       src="./images/lg-youtube.png"
@@ -168,8 +137,8 @@ const Header = ({}: Props) => {
                     />
                   </div>
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
 
             {/* <div className="ms-lg-3">
               <a

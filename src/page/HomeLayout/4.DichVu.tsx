@@ -18,7 +18,7 @@ const DichVu = ({}: Props) => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 padding: '0 0px',
-                alignItems: 'center'
+                alignItems: 'center',
               }}
             >
               <h2 className="text-white">Dịch vụ</h2>
@@ -90,7 +90,7 @@ const DichVu = ({}: Props) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-12">
+          <div className="col-lg-4 col-md-6 col-12 mb-4">
             <div className="team-block-wrap">
               <div className="team-block-info d-flex flex-column">
                 <div className="d-flex mt-auto mb-3">

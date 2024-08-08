@@ -345,9 +345,11 @@ strong {
 .navbar {
   background: transparent;
   z-index: 999999;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
+
 
 .navbar .container {
   background: rgba(0, 0, 0, 0.70);

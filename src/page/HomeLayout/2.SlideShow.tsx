@@ -36,7 +36,7 @@ const SlideShow = ({}: Props) => {
       autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
       pagination={{ clickable: true }}
       onSwiper={(swiper: any) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      onSlideChange={() => {}}
     >
       {data.map((i) => (
         <SwiperSlide key={i.src}>

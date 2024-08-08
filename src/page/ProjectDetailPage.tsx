@@ -1,17 +1,26 @@
-import {} from 'react';
+import { useRef } from 'react';
 import Header from './HomeLayout/1.Header';
 import LienHe from './HomeLayout/10.LienHe';
 import Footer from './HomeLayout/11.Footer';
+import useSize from '../hook/useSize';
 
 type Props = {};
 
 const ProjectDetailPage = ({}: Props) => {
+  const target = useRef(null);
+  const size: any = useSize(target);
   return (
-    <main>
+    <main ref={target}>
       <Header />
       <section style={{ marginTop: 160, marginBottom: 160 }}>
         <div className="container">
-          <div style={{ display: 'flex', gap: 30 }}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: size?.width > 1200 ? 'row' : 'column-reverse',
+              gap: 30,
+            }}
+          >
             <div style={{}}>
               <h2 style={{ color: '#EDB52A' }}>
                 Brand Campaign “Do more, be more” 2020
@@ -38,7 +47,7 @@ const ProjectDetailPage = ({}: Props) => {
                 src="https://www.youtube.com/embed/lNAhA4GIW0Y?feature=oembed"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen={true}
-              ></iframe>
+              />
             </div>
             <div style={{ width: 300, minWidth: 300 }}>
               <h6 style={{ color: '#EDB52A', textTransform: 'uppercase' }}>
@@ -55,7 +64,7 @@ const ProjectDetailPage = ({}: Props) => {
                   borderBottom: '1px solid #ccc',
                   marginBottom: 30,
                 }}
-              ></div>
+              />
               <h6>THỜI GIAN</h6>
               <p>2022</p>
               <div
@@ -64,7 +73,7 @@ const ProjectDetailPage = ({}: Props) => {
                   borderBottom: '1px solid #ccc',
                   marginBottom: 30,
                 }}
-              ></div>
+              />
               <h6>LĨNH VỰC</h6>
               <p>Telecommunications- Technology</p>
               <div
@@ -73,7 +82,7 @@ const ProjectDetailPage = ({}: Props) => {
                   borderBottom: '1px solid #ccc',
                   marginBottom: 30,
                 }}
-              ></div>
+              />
             </div>
           </div>
         </div>

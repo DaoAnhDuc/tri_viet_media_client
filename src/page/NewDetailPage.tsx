@@ -7,7 +7,7 @@ type Props = {};
 
 const NewDetailPage = ({}: Props) => {
   return (
-    <main>
+    <main id='new-page-detail'>
       <Header />
       <section
         className=" section-padding"

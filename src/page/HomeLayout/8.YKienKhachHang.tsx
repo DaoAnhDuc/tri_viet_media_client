@@ -15,7 +15,7 @@ const YKienKhachHang = ({}: Props) => {
             <h2 className="text-white">Ý kiến của khách hàng</h2>
           </div>
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6 col-12">
+            <div className="col-lg-4 col-md-6 col-12 mb-4">
               {' '}
               <div className="reviews-block">
                 <div className="reviews-block-image-wrap d-flex align-items-center">
@@ -50,7 +50,7 @@ const YKienKhachHang = ({}: Props) => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-12">
+            <div className="col-lg-4 col-md-6 col-12 mb-4">
               <div className="reviews-block">
                 <div className="reviews-block-image-wrap d-flex align-items-center">
                   <img
@@ -84,7 +84,7 @@ const YKienKhachHang = ({}: Props) => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-12">
+            <div className="col-lg-4 col-md-6 col-12 mb-4">
               <div className="reviews-block">
                 <div className="reviews-block-image-wrap d-flex align-items-center">
                   <img

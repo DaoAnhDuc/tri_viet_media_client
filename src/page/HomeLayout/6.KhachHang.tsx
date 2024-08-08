@@ -1,22 +1,13 @@
-import {} from 'react';
+import { useRef } from 'react';
 import { Pagination } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import useSize from '../../hook/useSize';
+import { chunkArray } from '../../utils';
 type Props = {};
 
 const KhachHang = ({}: Props) => {
   const logoUrls = [
-    'https://storage.googleapis.com/f1-cms/2019/10/d0abb962-20200108_024344.jpg',
-    ' https://storage.googleapis.com/f1-cms/2019/10/f6261a83-20200108_024635.jpg',
-    ' https://storage.googleapis.com/f1-cms/2019/10/e4e65bee-20200108_024842.jpg',
-    'https://storage.googleapis.com/f1-cms/2019/10/89668ff8-20200108_024905.jpg',
-    'https://storage.googleapis.com/f1-cms/2019/10/1994237e-20200108_024930.jpg',
-    'https://storage.googleapis.com/f1-cms/2019/10/fee9a69f-20200108_035705.jpg',
-    ' https://storage.googleapis.com/f1-cms/2019/10/c6487eda-20200108_035729.jpg',
-    ' https://storage.googleapis.com/f1-cms/2019/10/4a998273-20200108_035814.jpg',
-    'https://storage.googleapis.com/f1-cms/2019/10/c138f8f6-20200108_035849.jpg',
-    'https://storage.googleapis.com/f1-cms/2019/10/8be8474e-20200108_035932.jpg',
-    'https://storage.googleapis.com/f1-cms/2019/10/59aa7469-20200108_035954.jpg',
     'https://storage.googleapis.com/f1-cms/2019/10/68bc832a-20200108_040050.jpg',
     'https://storage.googleapis.com/f1-cms/2019/10/b3616764-20200108_040116.jpg',
     'https://storage.googleapis.com/f1-cms/2019/10/5636dcde-20200108_040139.jpg',
@@ -31,8 +22,13 @@ const KhachHang = ({}: Props) => {
     'https://storage.googleapis.com/f1-cms/2019/10/cfa06968-20200108_040622.jpg',
     'https://storage.googleapis.com/f1-cms/2019/10/b09264f7-20200108_040641.jpg',
   ];
+
+  const target = useRef(null);
+  const size: any = useSize(target);
+
   return (
     <section
+      ref={target}
       className="barista-section section-padding section-bg"
       id="section-6"
     >
@@ -47,22 +43,30 @@ const KhachHang = ({}: Props) => {
             // install Swiper modules
             modules={[Pagination]}
             spaceBetween={50}
-            slidesPerView={window.innerWidth < 600 ? 2 : 4}
+            slidesPerView={1}
             pagination={{ clickable: true }}
             onSwiper={(swiper: any) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
           >
-            {logoUrls.map((i) => (
-              <SwiperSlide key={i}>
-                <img
-                  src={i}
-                  alt=""
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'contain',
-                  }}
-                />
+            {chunkArray(
+              logoUrls,
+              Math.min(Math.floor(size?.width / 240), 5),
+            ).map((arr, index) => (
+              <SwiperSlide
+                key={index}
+                style={{ display: 'flex', justifyContent: 'center', gap: 10 }}
+              >
+                {arr.map((i) => (
+                  <img
+                    src={i}
+                    alt=""
+                    style={{
+                      width: 200,
+                      height: 200,
+                      objectFit: 'contain',
+                    }}
+                  />
+                ))}
               </SwiperSlide>
             ))}
           </Swiper>

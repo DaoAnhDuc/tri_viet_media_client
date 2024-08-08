@@ -68,7 +68,7 @@ const NewsPage = ({}: Props) => {
                               backgroundPosition: 'center',
                               borderRadius: 10,
                             }}
-                          ></div>
+                          />
                         </div>
 
                         <div className='text-content' style={{ padding: '30px', height: 356 }}>

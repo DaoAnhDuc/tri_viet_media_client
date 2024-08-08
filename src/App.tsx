@@ -25,6 +25,8 @@ const { defaultAlgorithm, darkAlgorithm } = theme;
 
 const { useToken } = theme;
 
+
+
 const App = () => {
   const { token } = useToken();
 
