@@ -58,6 +58,7 @@ const KhachHang = ({}: Props) => {
               >
                 {arr.map((i) => (
                   <img
+                  key={i}
                     src={i}
                     alt=""
                     style={{
