@@ -24,7 +24,7 @@ const ServicePage = ({}: Props) => {
           minHeight: '50vh',
         }}
       >
-        {size.width > 1200 && (
+        {size?.width > 1200 && (
           <div
             style={{
               position: 'absolute',

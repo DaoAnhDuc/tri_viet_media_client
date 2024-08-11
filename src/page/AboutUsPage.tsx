@@ -82,7 +82,7 @@ const AboutUsPage = ({}: Props) => {
           <h2 className="text-white mb-6">Đội ngũ của chúng tôi</h2>
           <div className="row align-items-center mt-6">
             {Array.from(Array(6).keys()).map((i) => (
-              <div className="col-lg-4 col-6 mt-lg-0 mb-4 " key={i}>
+              <div className="col-lg-4 col-md-6 col-sm-12 mb-4 " key={i}>
                 <Link to={'/chi-tiet'}>
                   <div className="user-item" style={{ position: 'relative' }}>
                     <img

@@ -48,7 +48,7 @@ const Header = ({}: Props) => {
               <li className="nav-item">
                 <Link
                   to={'/'}
-                  className={`nav-link click-scroll ${
+                  className={`nav-link click-scroll text-lg ${
                     pathname === '/' ? 'active' : ''
                   }`}
                 >
@@ -58,7 +58,7 @@ const Header = ({}: Props) => {
               <li className="nav-item">
                 <Link
                   to={'/ve-chung-toi'}
-                  className={`nav-link click-scroll ${
+                  className={`nav-link click-scroll text-lg ${
                     pathname === '/ve-chung-toi' ? 'active' : ''
                   }`}
                 >
@@ -68,7 +68,7 @@ const Header = ({}: Props) => {
               <li className="nav-item">
                 <Link
                   to={'/dich-vu'}
-                  className={`nav-link click-scroll ${
+                  className={`nav-link click-scroll text-lg ${
                     pathname === '/dich-vu' ? 'active' : ''
                   }`}
                 >
@@ -78,7 +78,7 @@ const Header = ({}: Props) => {
               <li className="nav-item">
                 <Link
                   to={'/du-an'}
-                  className={`nav-link click-scroll ${
+                  className={`nav-link click-scroll text-lg ${
                     pathname === '/du-an' ? 'active' : ''
                   }`}
                 >
@@ -88,33 +88,21 @@ const Header = ({}: Props) => {
               <li className="nav-item">
                 <Link
                   to={'/tin-tuc'}
-                  className={`nav-link click-scroll ${
+                  className={`nav-link click-scroll text-lg ${
                     pathname === '/tin-tuc' ? 'active' : ''
                   }`}
                 >
                   Tin tức
                 </Link>
               </li>
-              <li className="nav-item" style={{display: 'flex', alignItems: 'center', gap: 6}}>
+              <li
+                className="nav-item"
+                style={{ display: 'flex', alignItems: 'center', gap: 6 }}
+              >
                 <a>
                   <div style={{ padding: 2, borderRadius: 2 }}>
                     <img
-                      src="./images/zalo.jpg"
-                      alt=""
-                      style={{
-                        width: 32,
-                        height: 32,
-                        objectFit: 'contain',
-                        backgroundColor: '#ffffff',
-                        borderRadius: 4,
-                      }}
-                    />
-                  </div>
-                </a>
-                <a>
-                  <div style={{ padding: 2, borderRadius: 2 }}>
-                    <img
-                      src="./images/lg-facebook.png"
+                      src="https://stc-zaloprofile.zdn.vn/pc/v1/images/favicon.ico"
                       alt=""
                       style={{
                         width: 32,
@@ -127,7 +115,20 @@ const Header = ({}: Props) => {
                 <a>
                   <div style={{ padding: 2, borderRadius: 2 }}>
                     <img
-                      src="./images/lg-youtube.png"
+                      src="https://seeklogo.com/images/F/facebook-icon-circle-logo-09F32F61FF-seeklogo.com.png"
+                      alt=""
+                      style={{
+                        width: 32,
+                        height: 32,
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div style={{ padding: 2, borderRadius: 2 }}>
+                    <img
+                      src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-youtube-circle-512.png"
                       alt=""
                       style={{
                         width: 32,
